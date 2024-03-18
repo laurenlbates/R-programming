@@ -1,0 +1,12 @@
+Package: lauren
+Title: Lauren's Module 10
+Version: 1
+Authors@R: 
+    person("Lauren", "Bates", , "lbates4@usf.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: My final project will include the blog and my github assignments.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1.9000
