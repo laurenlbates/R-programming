@@ -1,0 +1,63 @@
+# Hello, world!
+#
+# This is an example function named 'hello'
+# which prints 'Hello, world!'.
+#
+# You can learn more about package authoring with RStudio at:
+#
+#   http://r-pkgs.had.co.nz/
+#
+# Some useful keyboard shortcuts for package authoring:
+#
+#   Install Package:           'Cmd + Shift + B'
+#   Check Package:             'Cmd + Shift + E'
+#   Test Package:              'Cmd + Shift + T'
+
+hello <- function() {
+  print("Hello, World!")
+}
+
+library(name)
+library(roxygen2)
+library(devtools)
+
+# Introduction to the Final
+#
+#Returns a welcoming sentence to my r package
+#
+# @return returns Hello, Welcome to Lauren's R Programming Final!
+intro <- function() {
+  print("Hello, Welcome to Lauren's R Programming Final!")
+}
+
+#example of squared number from mod 10
+square = function(x) {
+  y = x*x
+  return(y)
+}
+
+#' Creating objects in S4 class, Emergency Contact Information
+#'
+#' allows user to input emergency contact information
+#' @param FirstName the person's first name
+#' @param LastName description LastName the person's last name
+#' @param number description number the phone number of the emergency contact
+#' @param relationship the relationship of the person with the number to the main person
+#' @return object of the class
+#' @export
+EmergencyInfo <- function(FirstName, LastName, number, relationship) {
+  new("EmergencyInfo", FirstName = FirstName, LastName = LastName, number = number, relationship = relationship)
+}
+#' Displays Emergency Contact Information
+#'
+#' allows user to view information
+#'
+#' @param object of class for Emergency Info
+#' @return
+#' @export
+setMethod("show", "EmergencyInfo", function(object) {
+  cat("Name:", object@LastName, object@FirstName, "\n")
+  cat("Relationship:", object@relationship, "\n")
+  cat("Phone Number:", object@number, "\n")
+  invisible(NULL)
+})
